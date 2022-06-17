@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.gustavo.casorio.CasorioApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 23.587 s - in com.gustavo.casorio.CasorioApplicationTests
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.855 s - in com.gustavo.casorio.CasorioApplicationTests
