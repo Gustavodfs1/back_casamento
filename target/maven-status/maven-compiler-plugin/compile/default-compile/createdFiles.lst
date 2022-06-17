@@ -1,0 +1,7 @@
+com/gustavo/casorio/repository/ConvidadoRepository.class
+com/gustavo/casorio/model/Rsvp.class
+com/gustavo/casorio/config/EmailConfig.class
+com/gustavo/casorio/controller/RsvpController.class
+com/gustavo/casorio/model/Convidado.class
+com/gustavo/casorio/CasorioApplication.class
+com/gustavo/casorio/service/Service.class
