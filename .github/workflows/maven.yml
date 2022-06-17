@@ -24,6 +24,14 @@ jobs:
       run: mvn clean package 
     - name: build image
       run: docker build -t gustavodfs/casorio .
+    - name: push to gcr
+    - uses: RafikFarhad/push-to-gcr-github-action@v4
+      with:
+          gcloud_service_key: ${{ secrets.GCLOUD_AUTH }}
+          registry: gcr.io
+          project_id: marketcode
+          image_name: gustavodfs/casorio
+    
    
       
     
