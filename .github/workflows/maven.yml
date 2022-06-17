@@ -23,7 +23,7 @@ jobs:
     - name: Build with Maven
       run: mvn clean package 
     - name: build image
-      run: docker build -t gustavodfs/casorio .
+      run: docker build -t gcr.io/marketcode/gustavodfs/casorio .
     - name: teste
       env: 
           CASORIO: ${{ secrets.GCLOUD_AUTH }}
