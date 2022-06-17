@@ -25,7 +25,9 @@ jobs:
     - name: build image
       run: docker build -t gustavodfs/casorio .
     - name: teste
-      run: echo ${{ secrets.GCLOUD_AUTH }}
+      env: 
+          CASORIO: ${{ secrets.GCLOUD_AUTH }}
+      run: echo $CASORIO
     - name: push to gcr
       uses: RafikFarhad/push-to-gcr-github-action@v4
       with:
