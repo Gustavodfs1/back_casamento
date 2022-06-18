@@ -11,20 +11,20 @@ import lombok.Setter;
 public class Rsvp {
 
 	
-	private String nomeConvidado;
+	private String nome;
 	private int acompanhantes;
 	private String mensagem;
 	/**
 	 * @return the nomeConvidado
 	 */
-	public String getNomeConvidado() {
-		return nomeConvidado;
+	public String getNome() {
+		return nome;
 	}
 	/**
 	 * @param nomeConvidado the nomeConvidado to set
 	 */
-	public void setNomeConvidado(String nomeConvidado) {
-		this.nomeConvidado = nomeConvidado;
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 	/**
 	 * @return the nomeAcompanhante1

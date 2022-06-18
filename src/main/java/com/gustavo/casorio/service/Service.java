@@ -34,22 +34,22 @@ public class Service{
 
 	public static void montaEmail(Rsvp json) {
 		Rsvp rsvp = new Rsvp();
-		convidado.setNome(json.getNomeConvidado());
+		convidado.setNome(json.getNome());
 		convidado.setAcompanhantes(json.getAcompanhantes());
 		convidado.setMensagem(json.getMensagem());
 
 		StringBuilder mensagem = new StringBuilder();
 		mensagem.append(" O convidado: ");
-		mensagem.append(convidado.getNome());
+		mensagem.append(convidado.getNome().toUpperCase());
 		mensagem.append(" esta confirmando sua presença juntamente com: ");
 		mensagem.append(convidado.getAcompanhantes());
 		mensagem.append(" acompanhantes ");	
-		mensagem.append(" e deixaram a seguinte mensagem: ");
-		mensagem.append(convidado.getMensagem());
+		mensagem.append(" e deixaram a mensagem: ");
+		mensagem.append(convidado.getMensagem().toUpperCase());
 
 		
 		
-		repository.save(convidado);
+		//repository.save(convidado);
 		
 		sendMail(mensagem.toString(), convidado.getNome());
 
@@ -58,10 +58,11 @@ public class Service{
 	public static String sendMail(String mensagem, String nome) {
 		SimpleMailMessage message = new SimpleMailMessage();
 		message.setText(mensagem);
-		message.setSubject("Confirmação de convidado no site - rsvp" + nome );
+		message.setSubject("Confirmação de convidado - rsvp " + "  " + nome.toUpperCase() );
 		message.setCc("vvbadeborah@gmail.com");
+		message.setCc("guedehcasorio@gmail.com");
 		message.setTo("gustavodfs@gmail.com");
-		message.setFrom("guedehcasorio@gmail.com");
+		message.setFrom("gustavodfs@gmail.com");
 
 		try {
 			EmailConfig.getJavaMailSender().send(message);
